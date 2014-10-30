@@ -82,20 +82,31 @@ class MyFuncTestCase(unittest.TestCase):
         pass
 
     def test_Card_value(self):
-        pass
+        c1 = Card(7, 3)
+        self.assertEqual(8, c1.value())
+        c2 = Card(12, 1)
+        self.assertEqual(10, c2.value(face_cards_same=True))
+        c3 = Card(0, 0)
+        self.assertEqual(11, c3.value(ace_high=True))
 
     def test_Deck__init__(self):
         d1 = Deck()
         self.assertEqual(len(d1.deck), 0)
 
     def test_Deck_init_FrenchDeck(self):
-        pass
+        d1 = Deck()
+        d1.init_FrenchDeck()
+        self.assertEqual(52, len(d1.deck))
 
     def test_Deck_init_EuchreDeck(self):
-        pass
+        d1 = Deck()
+        d1.init_EuchreDeck()
+        self.assertEqual(24, len(d1.deck))
 
     def test_Deck_init_PinochleDeck(self):
-        pass
+        d1 = Deck()
+        d1.init_PinochleDeck()
+        self.assertEqual(48, len(d1.deck))
 
     def test_Deck___getitem__(self):
         pass
