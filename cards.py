@@ -1,5 +1,5 @@
 #
-# An OO Design to Implement a Deck of 52 cards
+# An OO Design to Implement a Deck of cards
 #   by Charles Gust
 #
 #  Card: Holds "rank" and "suit" paired to identify a card.
