@@ -172,7 +172,7 @@ class Deck():
         # This could be an expensive operation, but there is at least
         # one card game, War, where the discards get placed on the bottom
         # of the players hand/deck to be played again.
-        self.deck.insert(Card.check(0, insertable_card))
+        self.deck.insert(0, Card.check(insertable_card))
 
     def deal_next_card(self):
         """ pops the next card off a deck, which is at the end of the list FO of LIFO"""
